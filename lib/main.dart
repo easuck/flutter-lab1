@@ -27,8 +27,41 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ImageBanner("assets/images/woman.png", 110, 110, 38)
-      );
+      body: ListView(
+        children: [
+          const SizedBox(height: 44),
+          Stack(
+            alignment: AlignmentDirectional.topCenter,
+            fit: StackFit.loose,
+            clipBehavior: Clip.none,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(onPressed: (){}, icon: Image.asset("assets/images/cross.png")),
+                  IconButton(onPressed: (){}, icon: Image.asset("assets/images/exit.png"))
+                ]),
+              Positioned(
+                top: 14,
+                child: ImageBanner("assets/images/woman.png", 110, 110, 38) 
+              ),
+              const Positioned(
+                top: 157,
+                child: Text(
+                  "Екатерина",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24,
+                  ),
+                )
+              )
+            ]
+          ),
+          const SizedBox(height: 14)
+        ]
+      )
+    );
   }
 }
 
