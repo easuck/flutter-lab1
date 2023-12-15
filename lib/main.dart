@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -28,27 +28,16 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   body: ListView(
-    //     children: [
-    //       topbar(),
-    //       MyApp()
-    //     ],
-    //   )
-    // );
     return Scaffold(
      body: ListView(
        children: [
-          
           topbar(),
           const SizedBox(height: 14),
           SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width, 
             child: CustomTabBar()
-          )
-          //Expanded(child: CustomTabBar())
-          
+          ),
        ],
      ) 
     );

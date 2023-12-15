@@ -37,6 +37,8 @@ Widget topbar(){
             style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
+                fontFamily: "SF Pro Display",
+                height: 0.06
             ),
           ),
         ])
