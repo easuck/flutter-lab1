@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'topbar.dart';
+import 'custom_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,12 +28,24 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return Scaffold(
+    //   body: ListView(
+    //     children: [
+    //       topbar(),
+    //       MyApp()
+    //     ],
+    //   )
+    // );
     return Scaffold(
       body: ListView(
         children: [
-          topbar()
+          
+          topbar(),
+          const SizedBox(height: 14),
+          CustomTabBar(),
+           
         ],
-      )
+      ) 
     );
   }
 }
