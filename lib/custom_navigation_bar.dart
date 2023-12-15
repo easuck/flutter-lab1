@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/subscriptions/subscriptions.dart';
 import 'package:flutter_app/tariffs/tariffs.dart';
+import 'package:flutter_app/interests/interests.dart';
 
 
 class CustomTabBar extends StatefulWidget {
@@ -49,7 +50,8 @@ class _CustomTabBarState extends State<CustomTabBar>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     subscriptions(context),      
-                    tariffs(context)
+                    tariffs(context),
+                    interests(context)
                   ],
                 ),
                 const Center(
