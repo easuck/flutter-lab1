@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'subscription_list.dart';
 
 Widget subscriptions(BuildContext context) {
-  //return ListView(shrinkWrap: true, children: [
     return Column( children: [
     const Padding(
         padding: EdgeInsets.only(left: 16, top: 30, right: 16),

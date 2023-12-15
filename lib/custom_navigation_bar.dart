@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'subscriptions.dart';
+import 'package:flutter_app/subscriptions/subscriptions.dart';
+import 'package:flutter_app/tariffs/tariffs.dart';
 
 
 class CustomTabBar extends StatefulWidget {
@@ -44,7 +45,13 @@ class _CustomTabBarState extends State<CustomTabBar>
             child: TabBarView(
               controller: tabController,
               children: [
-                subscriptions(context),       
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    subscriptions(context),      
+                    tariffs(context)
+                  ],
+                ),
                 const Center(
                   child: Placeholder()
                 )
