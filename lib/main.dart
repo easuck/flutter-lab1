@@ -37,15 +37,20 @@ class MyHomePage extends StatelessWidget {
     //   )
     // );
     return Scaffold(
-      body: ListView(
-        children: [
+     body: ListView(
+       children: [
           
           topbar(),
           const SizedBox(height: 14),
-          CustomTabBar(),
-           
-        ],
-      ) 
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width, 
+            child: CustomTabBar()
+          )
+          //Expanded(child: CustomTabBar())
+          
+       ],
+     ) 
     );
   }
 }
